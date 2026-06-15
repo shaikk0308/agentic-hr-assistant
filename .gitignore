@@ -1,0 +1,21 @@
+# Credentials
+.env
+
+# Virtual Environment
+.venv/
+.venv311/
+env/
+venv/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local Databases (Ignore these if you want users to start fresh)
+db/*.db
+vectorstore/
+
+# Editor files
+.vscode/
+.idea/

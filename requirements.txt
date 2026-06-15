@@ -1,0 +1,6 @@
+google-adk==2.2.0
+fastmcp==3.4.2
+python-dotenv==1.0.1
+pypdf
+chromadb==0.5.5
+setuptools
