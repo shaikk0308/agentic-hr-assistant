@@ -173,7 +173,7 @@ git --version
 # Clone the Repository
 
 ```bash
-git clone <YOUR_REPOSITORY_URL>
+git clone https://github.com/shaikk0308/agentic-hr-assistant.git
 cd employee-assistant
 ```
 
