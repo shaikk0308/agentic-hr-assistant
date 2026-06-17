@@ -19,7 +19,7 @@ The application includes a modern web UI built with FastAPI and supports convers
 
 Watch the complete setup process from cloning the repository to running the application locally.
 
-https://youtu.be/ZRfIJkbLy2M
+https://youtu.be/mXjXD0eXrtg
 
 ---
 
