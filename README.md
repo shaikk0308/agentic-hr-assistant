@@ -214,12 +214,12 @@ pip install -r requirements.txt
 
 # Setup Database
 
-Before running the application, initialize the sample HR database.
-
-Run:
-
 ```bash
 python re-design_dbs.py
+```
+
+---
+
 
 # Configure Environment Variables
 
