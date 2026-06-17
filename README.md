@@ -27,12 +27,6 @@ https://youtu.be/ZRfIJkbLy2M
 
 Watch the HR AI Assistant in action, including:
 
-- Employee Profile Search
-- Leave Management
-- Compensation Details
-- Company Policy Search using RAG
-- Multi-Agent Routing using Google ADK and MCP
-
 https://youtu.be/X8f52bVaXw8
 
 ---
