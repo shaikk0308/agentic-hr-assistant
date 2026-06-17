@@ -19,7 +19,7 @@ The application includes a modern web UI built with FastAPI and supports convers
 
 Watch the complete setup process from cloning the repository to running the application locally.
 
-https://youtu.be/mXjXD0eXrtg
+https://www.youtube.com/watch?v=XtPom-NmpmA
 
 ---
 
@@ -27,7 +27,7 @@ https://youtu.be/mXjXD0eXrtg
 
 Watch the HR AI Assistant in action:
 
-https://youtu.be/X8f52bVaXw8
+https://www.youtube.com/watch?v=t7SfjClYqVE
 
 ---
 
