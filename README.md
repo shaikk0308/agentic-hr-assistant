@@ -347,18 +347,6 @@ How many WFH days are allowed?
 
 ---
 
-# Development
-
-Run in development mode:
-
-```bash
-uvicorn app:app --reload
-```
-
-Changes to Python files will automatically reload the application.
-
----
-
 # Troubleshooting
 
 ## Missing Dependencies
