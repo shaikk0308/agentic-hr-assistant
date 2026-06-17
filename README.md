@@ -25,7 +25,7 @@ https://youtu.be/mXjXD0eXrtg
 
 ## 🎥 Application Demo
 
-Watch the HR AI Assistant in action, including:
+Watch the HR AI Assistant in action:
 
 https://youtu.be/X8f52bVaXw8
 
