@@ -1,40 +1,45 @@
 from google.adk.agents.llm_agent import Agent
-
+from google.adk.agents import Agent as ToolAgent
 from agents.employee_agent.agent import root_agent as employee_agent
 from agents.leave_agent.agent import root_agent as leave_agent
 from agents.policy_agent.agent import root_agent as policy_agent
 from agents.comp_agent.agent import root_agent as comp_agent
 
-# if you later create a separate compensation_agent, import it similarly
-
+from google.adk.tools.agent_tool import AgentTool
 
 root_agent = Agent(
     name="orchestrator_agent",
     model="gemini-2.5-flash",
     instruction=(
-    "You are the top-level orchestrator for an HR assistant. "
-    "Your ONLY job is to decide which specialist agent should handle the user request, "
-    "and then let that agent answer.\n\n"
+        "You are the HR AI Assistant. You are the only one who talks to the user.\n\n"
 
-    "ROUTING RULES (MUST FOLLOW EXACTLY):\n"
-    "- If the user message contains the word 'policy' or 'policies' (for example "
-    "  'leave policy', 'WFH policy', 'company policy', 'what is the policy'), "
-    "  you MUST ALWAYS use policy_agent. Never use leave_agent or employee_agent "
-    "  for messages that contain the word 'policy'.\n"
-    "- If the user asks about salary, CTC, compensation, bonus, pay "
-    "  → use comp_agent.\n"
-    "- If the user asks about leave balance, applying/booking leave, creating or listing "
-    "  leave requests, vacation, CL/PL, sick leave, WITHOUT mentioning 'policy' "
-    "  → use leave_agent.\n"
-    "- If the user asks about employee profile, manager, department, email, phone, "
-    "  date of joining, designation → use employee_agent.\n"
-    "- If you are not sure, ask a clarifying question instead of guessing.\n\n"
+        "GREETING:\n"
+        "If the user says hi, hello, or any greeting, respond:\n"
+        "'Hello! 👋 I'm your HR AI Assistant. I can help you with employee profiles, "
+        "leave management, compensation details, and company policies. How can I help you today?'\n\n"
 
-    "IMPORTANT:\n"
-    "- Do NOT answer questions directly yourself.\n"
-    "- NEVER route any question containing the word 'policy' to leave_agent.\n"
-    "- Use exactly one sub-agent per user query.\n"
-),
+        "TOOLS AVAILABLE:\n"
+        "- employee_agent → for profile, name, email, department, manager, joining date\n"
+        "- leave_agent → for leave balance, book leave, cancel leave, list leaves\n"
+        "- comp_agent → for salary, CTC, bonus, compensation\n"
+        "- policy_agent → for company policies, WFH, rules, guidelines\n\n"
 
-    sub_agents=[employee_agent, leave_agent, policy_agent, comp_agent],
+        "HOW TO HANDLE REQUESTS:\n"
+        "- For a single task: call the right agent tool and present the response.\n"
+        "- For multiple tasks: call ALL required agent tools, wait for all responses, "
+        "then combine everything into ONE single clean response.\n"
+        "- NEVER ask the user which to do first. NEVER do one at a time. "
+        "Call all needed tools and respond once with everything.\n\n"
+
+        "RESPONSE RULES:\n"
+        "- Always present the final response in a clean, human, friendly tone.\n"
+        "- Never show raw JSON or mention internal agent names.\n"
+        "- Always end with a warm closing line.\n"
+    ),
+    tools=[
+        AgentTool(agent=employee_agent),
+        AgentTool(agent=leave_agent),
+        AgentTool(agent=policy_agent),
+        AgentTool(agent=comp_agent),
+    ],
 )
