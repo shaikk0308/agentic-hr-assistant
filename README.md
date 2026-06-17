@@ -174,7 +174,7 @@ git --version
 
 ```bash
 git clone https://github.com/shaikk0308/agentic-hr-assistant.git
-cd employee-assistant
+cd agentic-hr-assistant
 ```
 
 Example:
