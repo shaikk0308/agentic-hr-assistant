@@ -13,6 +13,33 @@ The application includes a modern web UI built with FastAPI and supports convers
 
 ---
 
+# Demo Videos
+
+## 🎥 Project Setup Walkthrough
+
+Watch the complete setup process from cloning the repository to running the application locally.
+
+https://youtu.be/ZRfIJkbLy2M
+
+---
+
+## 🎥 Application Demo
+
+Watch the HR AI Assistant in action, including:
+
+- Employee Profile Search
+- Leave Management
+- Compensation Details
+- Company Policy Search using RAG
+- Multi-Agent Routing using Google ADK and MCP
+
+https://youtu.be/X8f52bVaXw8
+
+---
+
+
+---
+
 # Architecture
 
 ```text
@@ -203,7 +230,7 @@ source .venv/bin/activate
 ```bash
 pip install -r requirements.txt
 
-pip install -e
+pip install -e .
 
 ```
 
