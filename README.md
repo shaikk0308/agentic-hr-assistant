@@ -158,7 +158,7 @@ employee-assistant/
 
 Install:
 
-* Python 3.11+
+* Python 3.11
 * Git
 
 Verify:
