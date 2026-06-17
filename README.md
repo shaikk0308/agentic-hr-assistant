@@ -177,12 +177,6 @@ git clone https://github.com/shaikk0308/agentic-hr-assistant.git
 cd agentic-hr-assistant
 ```
 
-Example:
-
-```bash
-git clone https://github.com/yourusername/employee-assistant.git
-cd employee-assistant
-```
 
 ---
 
